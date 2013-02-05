@@ -21,7 +21,12 @@ Ext.application({
     controllers: [
            "HowItWorks"
     ],
-    
+    models: [
+	"Day"
+    ],
+    stores: [
+	"Days"
+    ],
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',

@@ -11,25 +11,25 @@ Ext.define("Gsm.view.phone.OrderNowPhone", {
 	layout: {
 	    type: 'card'
 	},
-	scrollable: true,
+	//scrollable: true,
         itemId:'ordernowphone',
-        style: 'background:white',
+        //style: 'background:white',
         items: [
-	    
-	    {
+	   /* {
 		xtype: 'panel',
+		itemId: 'orderIntro',
 		items: [
+		     {
+			xtype: 'toptoolbarphone'
+		       },
 		    {
 			xtype: 'toolbar',
-			docked: 'top',
 			items: [
 			    {
 				xtype: 'button',
 				text: 'Back',
 				ui: 'back',
-				handler: function(){
-				    history.back();
-				}
+				itemId: 'orderIntroBackBtn'
 			    },
 			    {
 				xtype: 'spacer'
@@ -37,62 +37,62 @@ Ext.define("Gsm.view.phone.OrderNowPhone", {
 			    {
 				xtype: 'button',
 				text: 'Next',
-				itemId: 'order1next',
+				itemId: 'orderIntroNextBtn',
+				ui: 'confirm',
+				width: '100px'
+			    }
+			]
+		    }
+		]
+	    },
+	    */
+	    {
+		xtype: 'panel',
+		layout: {
+		    type: 'fit'
+		},
+	        itemId: 'chooseDaysPanel',
+		items: [
+		    
+			{
+			xtype: 'toolbar',
+			docked: 'top',
+			items: [
+			    {
+				xtype: 'button',
+				text: 'Back',
+				ui: 'back',
+				itemId: 'chooseDaysBackBtn'
+			    },
+			    {
+				xtype: 'spacer'
+			    },
+			    {
+				xtype: 'button',
+				text: 'Next',
+				itemId: 'chooseDaysNextBtn',
 				ui: 'confirm',
 				width: '100px'
 			    }
 			]
 		    },
-	
-	   {
-		xtype: 'panel',
-		items: [
 		    {
 			xtype: 'panel',
-			html: 'Choose your smoothie type:'
+			docked: 'top',
+			html: 'Select smoothie delivery days (discounts for bulk orders!)'
 		    },
 		    {
-			xtype: 'panel',
-			layout: {
-			    type: 'hbox'
-			},
-			items: [
-			    {
-				xtype: 'panel',
-				html: 'More Berries (sweeter)'
-			    },
-			    {
-				xtype: 'panel',
-				html: 'More Veggies (healthier)'
-			    }
-			]
-		    },
-		    {
-			xtype: 'panel',
-			height: '150px',
-			html: 'pic of smoothie goes here'
-		    },
-		    {
-			xtype: 'fieldset',
-			items: [
-			    {
-				xtype: 'sliderfield',
-				labelWidth: '0%',
-				value: 50,
-				minValue: 0,
-				maxValue: 100
-			    }
-			]
+			xtype: 'list',
+			store: 'daysStore',
+			itemTpl: new Ext.XTemplate(
+				'{day}, {month} {dom}',
+				'<br>',
+				'{selected}'
+			
+			)
 		    }
 		    
 		]
-	   }
-	   
-		]
-	    },
-	    {
-		xtype: 'panel',
-		html:'choose days',
 	    }
 	    
         ]

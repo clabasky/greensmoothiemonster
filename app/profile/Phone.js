@@ -20,8 +20,8 @@ Ext.define('Gsm.profile.Phone', {
     },
     
     launch: function() {
-        
-        Ext.Viewport.setActiveItem({xtype: "tabpanelphone"})
-	//Ext.Viewport.setActiveItem({xtype:"howitworksphone"});
+          
+        Ext.Viewport.setActiveItem({xtype: "tabpanelphone"});
+	Gsm.app.redirectTo('home');
     },
 });

@@ -16,7 +16,7 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
 		html: '<div class="monsterdiv"><img class="monsterimg" src="lib/greenmonster.gif"></img></div>'+
 			'<div class="righttitle" >Green<br>Smoothie<br>Monster.com</div>',
 		height: "120px",
-		style: 'background:green'
+		style: 'background:#06911F'
 	    }
         ]
     }  

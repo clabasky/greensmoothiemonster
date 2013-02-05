@@ -27,7 +27,11 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
             
            howItWorksBtn: 'button[itemId="howitworksbtn"]',
            orderNowBtn:   'button[itemId="ordernowbtn"]',
-           homeBtn:       'button[itemId="homebtn"]'
+           homeBtn:       'button[itemId="homebtn"]',
+           
+           chooseDaysBackBtn: 'button[itemId="chooseDaysBackBtn"]',
+           
+           chooseDaysList: 'panel[itemId="chooseDaysPanel"] > list'
          },
          
          control: {
@@ -43,8 +47,16 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
            
             orderNowBtn: {
                 tap: 'orderNowBtnTap'
-            }
+            },
     
+            chooseDaysBackBtn: {
+                tap: 'chooseDaysBackBtnTap'
+            },
+            
+            chooseDaysList: {
+                itemtap: 'chooseDaysItemTap'
+            }
+            
          },
         
           routes: {
@@ -58,7 +70,6 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
  
     homeRoute: function(){
          this.getTabPanelPhone().setActiveItem(this.getHomeLandingPhone());
-        //Ext.ComponentQuery.query('tabpanelphone')[0].setActiveItem(Ext.ComponentQuery.query('howitworksphone')[0]);
     },
     homeBtnTap: function(){
         Gsm.app.redirectTo('home');  
@@ -66,20 +77,59 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
      //go to how it works stuff
      howitworksRoute: function(){
         this.getTabPanelPhone().setActiveItem(this.getHowItWorksPhone());
-     // Ext.ComponentQuery.query('tabpanelphone')[0].setActiveItem(Ext.ComponentQuery.query('howitworksphone')[0]);
      },
      howItWorksBtnTap: function(){
         Gsm.app.redirectTo('howitworks');
      },
      
-     
-     
      //go to order now stuff
      ordernowRoute: function(){
         this.getTabPanelPhone().setActiveItem(this.getOrderNowPhone());
-      // Ext.ComponentQuery.query('tabpanelphone')[0].setActiveItem(Ext.ComponentQuery.query('ordernowphone')[0])
+        
+        //create the list of possible delivery days
+        this.getDeliveryDays();
      },
      orderNowBtnTap: function(){
          Gsm.app.redirectTo('ordernow');
+     },
+     
+     getDeliveryDays: function(){
+       
+       var futureDays = 30;
+       
+       var days = [];
+       for(var i=1; i<futureDays; i++){
+            var day = moment().add("days",i);
+            var formatted = day.format("ddd");
+            if(formatted != "Sat" && formatted != "Sun"){
+                
+                var freshDay = day.format("dddd");
+                var freshMonth = day.format("MMM");
+                var freshDom = day.format("Do");
+                
+                days.push({
+                    "day":freshDay,
+                    "month":freshMonth,
+                    "dom": freshDom
+                          });  
+            }
+       }
+       Ext.getStore('daysStore').setData(days);
+     },
+     
+     chooseDaysItemTap: function(list, index, target, record, e, eOpts){
+        console.log(record.getData());
+        var selected = record.getData().selected;
+        
+        if(selected == false){
+            record.set("selected", true);
+        }
+        else{
+            record.set("selected", false);
+        }
+     },
+     
+     chooseDaysBackBtnTap: function(){
+         history.back();
      }
  });
