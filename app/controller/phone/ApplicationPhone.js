@@ -118,7 +118,6 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
      },
      
      chooseDaysItemTap: function(list, index, target, record, e, eOpts){
-        console.log(record.getData());
         var selected = record.getData().selected;
         
         if(selected == false){

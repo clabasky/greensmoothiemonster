@@ -19,7 +19,7 @@ Ext.application({
             ],
 
     controllers: [
-           "HowItWorks"
+          
     ],
     models: [
 	"Day"
@@ -46,7 +46,8 @@ Ext.application({
     },
    
     launch: function() {
-	
+	//hide the initial load mask
+        Ext.get(Ext.DomQuery.select('.bokeh')[0]).destroy();
     },
 
     onUpdated: function() {
