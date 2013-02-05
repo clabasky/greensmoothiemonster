@@ -1,75 +1,32 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>Green Smoothie Monster</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	
-	<!-- custom styles -->
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+  <!--
+       <link rel="icon" href="resources/icons/TriNet_icon_114x114_v2.png" type="image/png"/>
+    -->
+    <title>Green Smoothie Monster</title>
+    
+    <!-- The line below must be kept intact for Sencha Command to build your application 
+    <script id="microloader" type="text/javascript" src="touch/microloader/development.js"></script>
+    -->
+    <!-- custom styles 
 	<link rel="stylesheet" href="lib/app.css" />
-	
-	<!-- custom js -->
-	<script src="lib/controller.js"></script>
-</head> 
-<body> 
-<!-- Start of first page -->
-<div data-role="page" id="how" >
-
-	<div data-role="header" class="ui-bar-f" >
-		
-			<div class="monsterdiv"><img class="monsterimg" src="lib/greenmonster.gif"></img></div>
-			<div class="righttitle" >Green<br>Smoothie<br>Monster.com</div>
-			<!--<div class="fruitsveggiesdiv"><img class="fruitsveggiesimg" src="lib/green-fruits-vegetables.jpg"></img></div>-->
-			
-	</div><!-- /header -->
-	<div data-role="header" class="ui-bar-a buttontoolbar" >
-		<div style="text-align: center;">
-			<!--<div data-role="controlgroup" data-type="horizontal" >-->
-				<a data-role="button" href="#how" class="howitworksbtn" data-theme="g" data-inline="true">How It Works</a>
-				<a data-role="button" href="#order" class="ordernowbtn" data-theme="a" data-inline="true">Sign Up!</a>
-			<!--</div>-->
-		</div>
-	</div>
-	<div data-role="content" >	
-		<h1>How It Works~ (Eat healthy and eliminate packaging waste)</h1>	
-		<br>
-		<p>1. <a href="#order">Sign up for smoothie delivery!</a> Smoothies are dropped off in your company's kitchen every morning.</p>
-		<br>
-		<p>2. Enjoy your delicious green smoothie </p>
-		<br>
-		<p>3. When you're finished, wash out your container and put it back in the box where you found it. We pick up and clean our smoothie jars every day, eliminating packaging waste.</p>
-		
-		
-	</div><!-- /content -->
-
-	
-</div><!-- /page -->
-
-
-<!-- Start of second page -->
-<div data-role="page" id="order">
-
-	<div data-role="header" class="ui-bar-f" >
-		
-			<div class="monsterdiv"><img class="monsterimg" src="lib/greenmonster.gif"></img></div>
-			<div class="righttitle" >Green<br>Smoothie<br>Monster.com</div>
-			
-			
-	</div><!-- /header -->
-	<div data-role="header" class="ui-bar-a buttontoolbar" >
-		<div style="text-align: center;">
-			<!--<div data-role="controlgroup" data-type="horizontal" >-->
-				<a data-role="button" href="#how" class="howitworksbtn" data-theme="g" data-inline="true">How It Works</a>
-				<a data-role="button" href="#order" class="ordernowbtn" data-theme="a" data-inline="true">Sign Up!</a>
-			<!--</div>-->
-		</div>
-	</div>
-	<div data-role="content" >	
-		
-	</div><!-- /crontent -->
-</div><!-- /page -->
-
+-->
+        <!-- sencha css -->
+        <link rel="stylesheet" href="lib/sencha-touch.css" />
+        
+	<!-- sencha sdk -->
+	<script src="touch/sencha-touch-all.js"></script>
+        <!-- sencha sdk -->
+	<script src="app.js"></script>
+        
+         <!-- custom css -->
+        <link rel="stylesheet" href="lib/app.css" />
+</head>
+<body>
+    
 </body>
 </html>
