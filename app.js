@@ -22,7 +22,8 @@ Ext.application({
           
     ],
     models: [
-	"Day"
+	"Day",
+	"User"
     ],
     stores: [
 	"Days"
@@ -46,8 +47,13 @@ Ext.application({
     },
    
     launch: function() {
+	
+	//initialize parse 
+	Parse.initialize("2KYJ5stmk47JDT7yTP3StxkjgRgygrdYiSMZ6vIx", "RxKlU1z4tccBRnIxZuHvplgcQeRRt8yVlyZEm5cp");
+	
 	//hide the initial load mask
         Ext.get(Ext.DomQuery.select('.bokeh')[0]).destroy();
+	
     },
 
     onUpdated: function() {

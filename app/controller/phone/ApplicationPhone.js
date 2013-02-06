@@ -32,6 +32,8 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
            chooseDaysBackBtn: 'button[itemId="chooseDaysBackBtn"]',
            
            chooseDaysList: 'panel[itemId="chooseDaysPanel"] > list'
+           
+           
          },
          
          control: {
@@ -56,6 +58,8 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
             chooseDaysList: {
                 itemtap: 'chooseDaysItemTap'
             }
+            
+           
             
          },
         
@@ -131,4 +135,6 @@ Ext.define("Gsm.controller.phone.ApplicationPhone", {
      chooseDaysBackBtnTap: function(){
          history.back();
      }
+     
+     
  });

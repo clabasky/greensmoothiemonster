@@ -9,9 +9,11 @@ Ext.define('Gsm.profile.Phone', {
                 'HomeLandingPhone',
                 'HowItWorksPhone',
                 'OrderNowPhone',
-                'TopToolbarPhone'],
+                'TopToolbarPhone',
+		'LoginPopup'],
         controllers: [
-            'ApplicationPhone'
+            'ApplicationPhone',
+	    'Login'
         ]
     },
 

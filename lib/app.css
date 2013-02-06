@@ -2,8 +2,8 @@
 
 .righttitle {
     float:left;
-    margin: 15px 25px 0px 15px;
-    font-size: 1.4em;
+    margin: 15px 20px 0px 15px;
+    font-size: 1em;
     color: rgb(255, 255, 255);
     font-family: ‘Arial Black’, Gadget, sans-serif;
 }
@@ -18,7 +18,7 @@
 }
 
 .monsterimg {
-    height:80px;
+    height:60px;
 }
 
 .fruitsveggiesdiv {
@@ -61,4 +61,77 @@ display: block;
 -webkit-margin-after: 1em;
 -webkit-margin-start: 0px;
 -webkit-margin-end: 0px;
+}
+
+.toolbarLoginDiv {
+    padding-top: 15px;
+    
+   
+}
+.toolbarLogin {
+   
+    text-decoration: none;
+    color: white;
+}
+/* gradient stuff */
+  
+.toptoolbargradient {
+  /* fallback */
+  
+  background-color: #06911F;
+  background-image: url(images/linear_bg_1.png);
+  background-repeat: repeat-y;
+  
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(#06911F), to(#2F2727));
+  
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #06911F, #1a82f7);
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #06911F, #1a82f7);
+  
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #06911F, #1a82f7);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #06911F, #1a82f7);
+}
+
+
+/* signup button */
+.signinsignupbtn {
+	-moz-box-shadow:inset 0px 0px 2px 1px #c1ed9c;
+	-webkit-box-shadow:inset 0px 0px 2px 1px #c1ed9c;
+	box-shadow:inset 0px 0px 2px 1px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #95cc14), color-stop(1, #66851d) );
+	background:-moz-linear-gradient( center top, #95cc14 5%, #66851d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#95cc14', endColorstr='#66851d');
+	background-color:#95cc14;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:6px 14px;
+	text-decoration:none;
+	text-shadow:1px 1px 4px #689324;
+}.signinsignupbtn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #66851d), color-stop(1, #95cc14) );
+	background:-moz-linear-gradient( center top, #66851d 5%, #95cc14 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#66851d', endColorstr='#95cc14');
+	background-color:#66851d;
+}.signinsignupbtn:active {
+	position:relative;
+	top:1px;
+}
+
+
+/* sign in page top text */
+.signinTopText {
+    padding: 20px 30px;
+    text-align: center;
 }
