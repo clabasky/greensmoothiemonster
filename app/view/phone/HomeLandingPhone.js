@@ -10,7 +10,7 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
     config: {
 	scrollable: true,
         itemId:'homelandingphone',
-        style: 'background:white',
+        style: 'background:#06911F',
 	 items: [
 	  {
 	    xtype: 'toptoolbarphone'
@@ -34,7 +34,7 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
 		    {
 			xtype: 'button',
 			itemId: 'ordernowbtn',
-			text: 'Order Smoothies!',
+			text: 'Sign Up!',
 			width: '45%'
 		    },
 		    {
@@ -44,17 +44,21 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
 	    },
 	     {
              xtype: 'panel',
-             html: '<h1> Welcome!</h1>'+
-		  
-		    '<p>Green Smoothie Monster is an environmentally friendly way to get the fruits and vegetables your body needs every day!</p>'+
-		
-		    '<p>We deliver fresh smoothies in reusable jars to participating businesses daily in San Francisco.</p>'+
-		
-		    '<p><a href="#ordernow">Choose your smoothie now!</a></p>'+
-		
-		    'or'+
+             html:
+		'<div class="welcomeDiv">'+
+		    '<h1>We <a class="greenLinktext">&hearts;</a> Earth</h1>'+
+		   
+		     '<p><b>Green Smoothie Monster</b> delivers fresh green smoothies in glass jars to offices and homes every morning in San Francisco.</p>'+
+		     
+		     '<p>We pick up your used smoothie jars on your next order and clean them to be used again!</p><br>'+
+		     
 		    
-		    '<p><a href="#howitworks">learn more about us</a></p>'
+		    '<p style="text-align:center;"><a href="#ordernow" class="greenLinktext">Sign up for smoothie delivery now!</a></p>'+
+		
+		    '<p style="text-align:center;">or</p>'+
+		    
+		    '<p style="text-align:center;"><a href="#howitworks" class="greenLinktext">See how it works</a></p>'+
+		'</div>'
              }
         ]
     }  

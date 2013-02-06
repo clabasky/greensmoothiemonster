@@ -27,10 +27,11 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
 	    
 	    {
 		xtype: 'panel',
-		height: '120px',
-		cls: 'toptoolbargradient',
+		height: '110px',
+		//cls: 'toptoolbargradient',
 		html: '<div class="toolbarLoginDiv"><a href="#login" class="signinsignupbtn">Sign In</a></div>',
-		width: '100%'
+		width: '100%',
+		style: 'background:#06911F'
 	    }
         ]
     }  
