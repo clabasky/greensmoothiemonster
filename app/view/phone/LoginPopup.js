@@ -61,25 +61,31 @@ Ext.define("Gsm.view.phone.LoginPopup", {
 			xtype: 'panel',
 			height: '10px'
 		    },
-	    
 		    {
-			xtype: 'radiofield',
-			name : 'returningUser',
-			value: false,
-			label: 'I am a new user',
-			labelWidth: '70%',
-			width: '90%'
+			xtype: 'fieldset',
+			width: '90%',
+			items: [
+			    {
+				xtype: 'radiofield',
+				name : 'returningUser',
+				value: false,
+				label: 'I am a new user',
+				labelWidth: '70%'
+				//width: '90%'
+			    },
+			    {
+				xtype: 'radiofield',
+				itemId: 'returningUserRadio',
+				name : 'returningUser',
+				value: true,
+				label: 'I am a returning user',
+				labelWidth: '70%',
+				checked: true
+				//width: '90%'
+			    }
+			]
 		    },
-		    {
-			xtype: 'radiofield',
-			itemId: 'returningUserRadio',
-			name : 'returningUser',
-			value: true,
-			label: 'I am a returning user',
-			labelWidth: '70%',
-			checked: true,
-			width: '90%'
-		    },
+		    
 		    {
 			xtype: 'panel',
 			height: '10px'
@@ -102,7 +108,7 @@ Ext.define("Gsm.view.phone.LoginPopup", {
 			itemId: 'reenterPasswordField',
 			hidden: true,
 			width: '90%',
-			labelWidth: '40%'
+			labelWidth: '50%'
 		    }
 
 	]

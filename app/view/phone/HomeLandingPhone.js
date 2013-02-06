@@ -59,12 +59,12 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
 		    '<h1>We <a class="greenLinktext">&hearts;</a> Smoothies</h1>'+
 		    
 		   
-		     '<p><b>Green Smoothie Monster</b> delivers fresh green smoothies in glass jars to offices and homes every morning in San Francisco.</p>'+
+		     '<p><b>Green Smoothie Monster</b> delivers fresh green smoothies to homes and offices every morning in San Francisco.</p>'+
 		     '<img src="lib/green-smoothie1.jpg" width="200px"class="smoothieImg"></img>'+
 		   
 		   '<br>'+
-		     '<p>These smoothies are made fresh with local, organic fruits and vegetables.<p>'+
-		     '<p>We pick up your used smoothie jars on your next order and clean them to be used again!</p><br>'+
+		     '<p>These smoothies are made fresh daily and jam packed with organic fruits and vegetables.<p>'+
+		     '<p>We send pick up your used smoothie jars on your next order and clean them to be used again!</p><br>'+
 		     
 		    
 		    '<p style="text-align:center;"><a href="#ordernow" class="greenLinktext">Sign up for smoothie delivery now!</a></p>'+

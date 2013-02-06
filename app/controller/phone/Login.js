@@ -22,7 +22,7 @@ Ext.define("Gsm.controller.phone.Login", {
            signUpBtn: 'button[itemId="signUpBtn"]',
            signInBtn: 'button[itemId="signInBtn"]',
            signInBackBtn: 'button[itemId="signInBackBtn"]',
-           returningUserRadio: 'panel[itemId="loginpopup"] > radiofield[itemId="returningUserRadio"]',
+           returningUserRadio: 'panel[itemId="loginpopup"] > fieldset > radiofield[itemId="returningUserRadio"]',
            reenterPassword: 'passwordfield[itemId="reenterPasswordField"]',
            userNameField:   'loginpopup > textfield',
            passwordField:   'loginpopup > passwordfield[itemId="passwordField"]'
@@ -85,7 +85,7 @@ Ext.define("Gsm.controller.phone.Login", {
      
     signInBtnTap: function(){
         
-        var userName = this.getUserNameField().getValue();
+        var userName = this.getUserNameField().getValue().toLocaleLowerCase();
         var password = this.getPasswordField().getValue();
         
         Parse.User.logIn(userName, password, {
@@ -95,14 +95,18 @@ Ext.define("Gsm.controller.phone.Login", {
             error: function(user, error) {
                 console.log(user);
                 console.log(error);
+                alert(Ext.encode(error));
               // The login failed. Check error to see why.
             }
           });
+        
+        this.getPasswordField().setValue("");
+        this.getReenterPassword("");
     },
     
     signUpBtnTap: function(){
         
-        var userName = this.getUserNameField().getValue();
+        var userName = this.getUserNameField().getValue().toLocaleLowerCase();
         var password = this.getPasswordField().getValue();
         
         var reenterPassword = this.getReenterPassword().getValue();
@@ -112,9 +116,14 @@ Ext.define("Gsm.controller.phone.Login", {
             return;
         }
         
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: 'Signing Up...'
+        });
+        
+        
         var user = new Parse.User();
         
-         
         user.signUp({
             "username":userName,
             "password":password,
@@ -122,15 +131,22 @@ Ext.define("Gsm.controller.phone.Login", {
         },
         {
           success: function(user) {
+            Ext.Viewport.setMasked(false);
             Gsm.app.getController('phone.Login').onSignInSuccess(user);
           },
           error: function(user, error) {
+             Ext.Viewport.setMasked(false);
+             
+             if(error.message == "invalid login parameters"){
+                Ext.Msg.alert("","Invalid Login or Password, try again.")
+             }
             // Show the error message somewhere and let the user try again.
             alert("Error: " + error.code + " " + error.message);
           }
         });
-
-
+        
+        this.getPasswordField().setValue("");
+        this.getReenterPassword("");
      },
      
      onSignInSuccess: function(user){
