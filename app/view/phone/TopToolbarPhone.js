@@ -9,7 +9,7 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
     config: {
 	
         itemId:'toptoolbarphone',
-	height: "100px",
+	height: "110px",
 	layout: {
 	    type: 'hbox',
 	    pack: 'start',
@@ -18,8 +18,9 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
         items: [
 	    {
 		xtype: 'panel',
-		html: '<div class="monsterdiv"><img class="monsterimg" src="lib/greenmonster.gif"></img></div>'+
-			'<div class="righttitle" >Green<br>Smoothie<br>Monster.com</div>',
+		html: '<div class="monsterdiv"><img class="monsterimg" src="lib/greenmonster.gif"></img>'+
+		'<div class="righttitle" >Green<br>Smoothie<br>Monster.com</div>'+
+		'</div>',
 		//height: "120px",
 		style: 'background:#06911F'
 	    },
@@ -28,7 +29,7 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
 		xtype: 'panel',
 		height: '120px',
 		cls: 'toptoolbargradient',
-		html: '<div class="toolbarLoginDiv"><a href="#login" class="signinsignupbtn">Sign In/<br>Sign Up</a></div>',
+		html: '<div class="toolbarLoginDiv"><a href="#login" class="signinsignupbtn">Sign In</a></div>',
 		width: '100%'
 	    }
         ]
