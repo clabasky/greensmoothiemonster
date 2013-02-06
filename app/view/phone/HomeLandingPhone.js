@@ -10,13 +10,21 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
     config: {
 	scrollable: true,
         itemId:'homelandingphone',
-        style: 'background:#06911F',
+        style: 'background:#D4D3D2',
 	 items: [
 	  {
 	    xtype: 'toptoolbarphone'
 	   },
 	    {
-		xtype: 'toolbar',
+		xtype: 'panel',
+		height: '75px',
+		//style: 'background:#E3D6BF',
+		cls: 'toolbarGradient',
+		layout: {
+		    type: 'hbox',
+		    align: 'center',
+		    pack: 'start'
+		},
 		items: [
 		    {
 			xtype: 'spacer'
@@ -25,7 +33,8 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
 			xtype: 'button',
 			itemId: 'howitworksbtn',
 			text: 'How It Works',
-			width: '45%'
+			width: '45%',
+			ui: 'confirm'
 		    },
 		    {
 			xtype: 'spacer'
@@ -35,7 +44,8 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
 			xtype: 'button',
 			itemId: 'ordernowbtn',
 			text: 'Sign Up!',
-			width: '45%'
+			width: '45%',
+			ui: 'confirm'
 		    },
 		    {
 			xtype: 'spacer'
@@ -46,10 +56,14 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
              xtype: 'panel',
              html:
 		'<div class="welcomeDiv">'+
-		    '<h1>We <a class="greenLinktext">&hearts;</a> Earth</h1>'+
+		    '<h1>We <a class="greenLinktext">&hearts;</a> Smoothies</h1>'+
+		    
 		   
 		     '<p><b>Green Smoothie Monster</b> delivers fresh green smoothies in glass jars to offices and homes every morning in San Francisco.</p>'+
-		     
+		     '<img src="lib/green-smoothie1.jpg" width="200px"class="smoothieImg"></img>'+
+		   
+		   '<br>'+
+		     '<p>These smoothies are made fresh with local, organic fruits and vegetables.<p>'+
 		     '<p>We pick up your used smoothie jars on your next order and clean them to be used again!</p><br>'+
 		     
 		    

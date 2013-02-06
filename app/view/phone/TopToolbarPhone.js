@@ -22,7 +22,7 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
 		'<div class="righttitle" >Green<br>Smoothie<br>Monster.com</div>'+
 		'</div>',
 		//height: "120px",
-		style: 'background:#06911F'
+		style: 'background:#000000'
 	    },
 	    
 	    {
@@ -31,7 +31,7 @@ Ext.define("Gsm.view.phone.TopToolbarPhone", {
 		//cls: 'toptoolbargradient',
 		html: '<div class="toolbarLoginDiv"><a href="#login" class="signinsignupbtn">Sign In</a></div>',
 		width: '100%',
-		style: 'background:#06911F'
+		style: 'background:#000000'
 	    }
         ]
     }  

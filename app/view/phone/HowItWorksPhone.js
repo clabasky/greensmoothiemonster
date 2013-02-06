@@ -10,13 +10,22 @@ Ext.define("Gsm.view.phone.HowItWorksPhone", {
     config: {
 	scrollable: true,
         itemId:'howitworksphone',
-	 style: 'background:#06911F',
+	 style: 'background:#D4D3D2',
 	items: [
 	   {
 	    xtype: 'toptoolbarphone'
 	   },
-	     {
-	    xtype: 'toolbar',
+	     
+	  {
+		xtype: 'panel',
+		height: '75px',
+		//style: 'background:#E3D6BF',
+		cls: 'toolbarGradient',
+		layout: {
+		    type: 'hbox',
+		    align: 'center',
+		    pack: 'start'
+		},
 	    items: [
 		    {
 			xtype: 'spacer'
@@ -25,7 +34,8 @@ Ext.define("Gsm.view.phone.HowItWorksPhone", {
 			xtype: 'button',
 			itemId: 'homebtn',
 			text: 'Home',
-			width: '45%'
+			width: '45%',
+			ui: 'confirm'
 		    },
 		
 		    {
@@ -35,7 +45,8 @@ Ext.define("Gsm.view.phone.HowItWorksPhone", {
 			xtype: 'button',
 			itemId: 'ordernowbtn',
 			text: 'Sign Up!',
-			width: '45%'
+			width: '45%',
+			ui: 'confirm'
 		    },
 		    {
 			xtype: 'spacer'
