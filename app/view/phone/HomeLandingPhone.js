@@ -60,7 +60,7 @@ Ext.define("Gsm.view.phone.HomeLandingPhone", {
 		    
 		   
 		     '<p><b>Green Smoothie Monster</b> delivers fresh green smoothies to homes and offices every morning in San Francisco.</p>'+
-		     '<img src="lib/green-smoothie1.jpg" width="200px"class="smoothieImg"></img>'+
+		     '<div align="center"><img src="lib/green-smoothie1.jpg" width="200px"class="smoothieImg"></img></div>'+
 		   
 		   '<br>'+
 		     '<p>These smoothies are made fresh daily and jam packed with organic fruits and vegetables.<p>'+

@@ -27,10 +27,10 @@ background-image: -webkit-linear-gradient(top, #000000 0%, #D4D3D2 100%);
 }
 
 .welcomeDiv {
-    padding: 10px 15px;
+    padding: 10px 10px;
     background-color:#427016;
  
-    margin: 10px 15px;
+    margin: 10px 10px;
     border-style: solid;
     border-width: 5px;
     border-color: white;
